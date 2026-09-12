@@ -1,0 +1,26 @@
+JAIPUR ENGINEERS - COURSE SINGLE REDESIGN
+
+Reference direction:
+- Inspired by the supplied 5-page course-detail PDF structure.
+- Intentionally not copied: Jaipur Engineers layout uses a dark career-roadmap card, code-preview media panel, orange/cream/charcoal palette, and distinct CTA/footer treatment.
+
+Brand palette used:
+- Jaipur Engineers Orange: #FF731E
+- Deep Orange: #F45E2D
+- Ink / Black: #111318
+- Warm Cream: #FFFAF6
+- Soft Orange: #FFF0E6
+- White: #FFFFFF
+
+Files changed / added:
+- course-single.html (new branded design)
+- style.css (complete new styling)
+- course-single-original.html (backup of uploaded HTML)
+- assets/images/brand/* (exact copies of official uploaded Jaipur Engineers logos)
+- REDESIGN-NOTES.txt
+
+Important before production:
+- Replace demo curriculum/content if required.
+- Link counselling buttons to actual WhatsApp/phone/form URLs.
+- Replace the demo review percentages with verified Jaipur Engineers review data.
+- Connect final navigation links to the live Jaipur Engineers site structure.
