@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Java Full Stack Developer Course - Jaipur Engineers</title>
+  <desc id="desc">Premium Jaipur Engineers course thumbnail in orange, black and white.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111318"/><stop offset=".68" stop-color="#191d24"/><stop offset="1" stop-color="#2b1a10"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff731e"/><stop offset="1" stop-color="#f45e2d"/></linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#ffffff" stroke-opacity=".035"/></pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1280" height="720" rx="36" fill="url(#bg)"/>
+  <rect width="1280" height="720" rx="36" fill="url(#grid)"/>
+  <circle cx="1180" cy="50" r="330" fill="#ff731e" opacity=".12"/>
+  <circle cx="1110" cy="635" r="260" fill="#ff731e" opacity=".08"/>
+
+  <rect x="72" y="62" width="328" height="94" rx="18" fill="#ffffff"/>
+  <image href="../../assets/images/jaipur-engieers-logo.png" x="92" y="82" width="288" height="54" preserveAspectRatio="xMidYMid meet"/>
+
+  <g transform="translate(75 205)">
+    <rect width="154" height="34" rx="17" fill="#ff731e"/>
+    <text x="77" y="23" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-weight="700" font-size="14" letter-spacing="1">CAREER TRACK</text>
+    <text x="0" y="105" fill="#fff" font-family="Arial, sans-serif" font-weight="800" font-size="76" letter-spacing="-3">JAVA</text>
+    <text x="0" y="180" fill="#ff731e" font-family="Arial, sans-serif" font-weight="800" font-size="76" letter-spacing="-3">FULL STACK</text>
+    <text x="0" y="232" fill="#fff" font-family="Arial, sans-serif" font-weight="700" font-size="34">Developer Course in Jaipur</text>
+    <text x="0" y="282" fill="#bec3cc" font-family="Arial, sans-serif" font-size="22">Core Java • Spring Boot • React • MySQL</text>
+
+    <g transform="translate(0 326)">
+      <rect width="170" height="48" rx="14" fill="#ffffff" fill-opacity=".08" stroke="#ffffff" stroke-opacity=".12"/>
+      <text x="85" y="31" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700" font-size="17">10 Weeks</text>
+      <rect x="184" width="190" height="48" rx="14" fill="#ffffff" fill-opacity=".08" stroke="#ffffff" stroke-opacity=".12"/>
+      <text x="279" y="31" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700" font-size="17">Live Projects</text>
+      <rect x="388" width="218" height="48" rx="14" fill="#ffffff" fill-opacity=".08" stroke="#ffffff" stroke-opacity=".12"/>
+      <text x="497" y="31" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700" font-size="17">Offline + Online</text>
+    </g>
+  </g>
+
+  <g transform="translate(835 142)" filter="url(#shadow)">
+    <rect width="355" height="442" rx="30" fill="#0d0f13" stroke="#ffffff" stroke-opacity=".14"/>
+    <rect x="22" y="22" width="311" height="42" rx="12" fill="#171a20"/>
+    <circle cx="45" cy="43" r="5" fill="#ff731e"/><circle cx="64" cy="43" r="5" fill="#ffd0b3"/><circle cx="83" cy="43" r="5" fill="#fff" fill-opacity=".3"/>
+    <text x="105" y="48" fill="#8e949e" font-family="monospace" font-size="12">career.java</text>
+    <text x="36" y="119" fill="#6f7681" font-family="monospace" font-size="16">01</text><text x="72" y="119" fill="#fff" font-family="monospace" font-size="19">class <tspan fill="#ff731e">Developer</tspan> {</text>
+    <text x="36" y="166" fill="#6f7681" font-family="monospace" font-size="16">02</text><text x="72" y="166" fill="#fff" font-family="monospace" font-size="18">skills = [</text>
+    <text x="91" y="202" fill="#ff9b60" font-family="monospace" font-size="17">"Java", "Spring",</text>
+    <text x="91" y="235" fill="#ff9b60" font-family="monospace" font-size="17">"React", "SQL"</text>
+    <text x="72" y="269" fill="#fff" font-family="monospace" font-size="18">];</text>
+    <text x="36" y="317" fill="#6f7681" font-family="monospace" font-size="16">03</text><text x="72" y="317" fill="#fff" font-family="monospace" font-size="18">projects = <tspan fill="#ff731e">true</tspan>;</text>
+    <text x="36" y="364" fill="#6f7681" font-family="monospace" font-size="16">04</text><text x="72" y="364" fill="#fff" font-family="monospace" font-size="18">jobReady = <tspan fill="#ff731e">true</tspan>;</text>
+    <text x="72" y="407" fill="#fff" font-family="monospace" font-size="19">}</text>
+  </g>
+
+  <g transform="translate(835 608)">
+    <rect width="355" height="54" rx="18" fill="url(#accent)"/>
+    <text x="177.5" y="34" text-anchor="middle" fill="#fff" font-family="Arial" font-size="17" font-weight="700">Mansarovar, Jaipur • Est. 1996</text>
+  </g>
+</svg>
