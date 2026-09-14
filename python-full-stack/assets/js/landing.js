@@ -28,15 +28,30 @@
   });
 
   document.querySelectorAll('.js-whatsapp-form').forEach(function(form){
+    var section=form.closest('.lead-section');
+    if(section){
+      var title=section.querySelector('.lead-copy h2');
+      var copy=section.querySelector('.lead-copy p');
+      var formTitle=form.querySelector('h3');
+      var button=form.querySelector('button[type="submit"]');
+      var note=form.querySelector('.form-note');
+      if(title)title.textContent='Start your Python Full Stack course enquiry.';
+      if(copy)copy.textContent='Enter your name and mobile number first. The next step captures your learning preference and saves the enquiry securely for counselling follow-up.';
+      if(formTitle)formTitle.textContent='Start enquiry';
+      if(button)button.innerHTML='<i class="fa fa-arrow-right"></i> Continue Enquiry';
+      if(note)note.textContent='Next: email, qualification, preferred mode and batch details.';
+    }
+
+    form.setAttribute('method','get');
+    form.setAttribute('action','enquire.php');
     form.addEventListener('submit',function(e){
       e.preventDefault();
       var name=(form.querySelector('[name="name"]')||{}).value||'';
       var phone=(form.querySelector('[name="phone"]')||{}).value||'';
-      var message='Hello Jaipur Engineers, I am interested in the Python Full Stack Developer course.';
-      if(name){message+='\nName: '+name.trim();}
-      if(phone){message+='\nPhone: '+phone.trim();}
-      message+='\nPlease share the next batch timing, current fee and counselling details.';
-      window.open('https://wa.me/917014692039?text='+encodeURIComponent(message),'_blank','noopener');
+      var params=new URLSearchParams(window.location.search);
+      params.set('name',name.trim());
+      params.set('phone',phone.trim());
+      window.location.href='enquire.php?'+params.toString();
     });
   });
 })();
