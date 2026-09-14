@@ -21,7 +21,7 @@ $course = [
     'projects' => '4+ Projects',
     'mode' => 'Offline + Online',
     'description' => 'Learn Python, Django, REST APIs, React, SQL, Git and deployment through practical full stack projects with Jaipur Engineers.',
-    'canonical' => 'https://jaipurengineers.com/courses/python-full-stack-developer-course-jaipur/',
+    'canonical' => 'https://jaipurengineers.com/python-full-stack/',
 ];
 
 function je_whatsapp_url(string $message): string {
