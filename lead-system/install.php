@@ -7,14 +7,14 @@ if (PHP_SAPI !== 'cli') {
 }
 
 $options = getopt('', [
-    'db-host::', 'db-port::', 'db-name::', 'db-user::', 'db-pass::',
-    'smtp-host::', 'smtp-port::', 'smtp-user::', 'smtp-pass::', 'smtp-encryption::',
-    'smtp-from::', 'smtp-from-name::', 'smtp-to::', 'help'
+    'db-host:', 'db-port:', 'db-name:', 'db-user:', 'db-pass:',
+    'smtp-host:', 'smtp-port:', 'smtp-user:', 'smtp-pass:', 'smtp-encryption:',
+    'smtp-from:', 'smtp-from-name:', 'smtp-to:', 'help'
 ]);
 
 if (isset($options['help'])) {
     echo "Jaipur Engineers lead-system installer\n\n";
-    echo "Required: --db-name --db-user --db-pass\n";
+    echo "Required: --db-name=... --db-user=... --db-pass=...\n";
     echo "Optional: --db-host=localhost --db-port=3306 and SMTP options.\n";
     echo "Prefer environment variables for passwords: JE_DB_PASS and JE_SMTP_PASS.\n";
     exit(0);
