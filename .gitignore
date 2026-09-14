@@ -1,0 +1,3 @@
+vendor/
+lead-system/config.local.php
+lead-system/logs/*.log
