@@ -1,6 +1,10 @@
 <?php
-$name = isset($_GET['name']) ? mb_substr(trim((string)$_GET['name']), 0, 120) : '';
-$phone = isset($_GET['phone']) ? mb_substr(preg_replace('/[^0-9+() -]/', '', (string)$_GET['phone']) ?? '', 0, 25) : '';
+$clip = static function (string $value, int $max): string {
+    return function_exists('mb_substr') ? mb_substr($value, 0, $max) : substr($value, 0, $max);
+};
+$name = isset($_GET['name']) ? $clip(trim((string)$_GET['name']), 120) : '';
+$phoneRaw = isset($_GET['phone']) ? (preg_replace('/[^0-9+() -]/', '', (string)$_GET['phone']) ?? '') : '';
+$phone = $clip($phoneRaw, 25);
 ?>
 <!doctype html>
 <html lang="en">
