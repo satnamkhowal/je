@@ -47,7 +47,8 @@ try {
         'user_agent' => je_lead_clean($_SERVER['HTTP_USER_AGENT'] ?? '', 500),
     ];
 
-    if (mb_strlen($lead['student_name']) < 2 || strlen($lead['phone']) < 10 || strlen($lead['phone']) > 15) {
+    $nameLength = function_exists('mb_strlen') ? mb_strlen($lead['student_name']) : strlen($lead['student_name']);
+    if ($nameLength < 2 || strlen($lead['phone']) < 10 || strlen($lead['phone']) > 15) {
         je_lead_fail();
     }
     if (!filter_var($lead['email'], FILTER_VALIDATE_EMAIL) || $lead['interested_course'] === '' || $lead['contact_consent'] !== 1) {
@@ -64,7 +65,8 @@ try {
     $rateMax = max(1, (int)($security['rate_limit_max'] ?? 5));
     $duplicateHours = max(1, (int)($security['duplicate_hours'] ?? 24));
 
-    $rateSql = "SELECT COUNT(*) FROM je_leads WHERE ip_hash = :ip_hash AND created_at >= DATE_SUB(NOW(), INTERVAL {$rateMinutes} MINUTE)";
+    // duplicate_count is included so repeated submissions of the same lead also consume the rate limit.
+    $rateSql = "SELECT COALESCE(SUM(1 + duplicate_count), 0) FROM je_leads WHERE ip_hash = :ip_hash AND COALESCE(last_seen_at, created_at) >= DATE_SUB(NOW(), INTERVAL {$rateMinutes} MINUTE)";
     $rate = $pdo->prepare($rateSql);
     $rate->execute(['ip_hash' => $lead['ip_hash']]);
     if ((int)$rate->fetchColumn() >= $rateMax) {
