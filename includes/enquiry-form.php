@@ -19,8 +19,11 @@ $enquiryCourses = [
     'Other IT Course',
 ];
 
+$defaultEnquiryCourse = $defaultEnquiryCourse ?? '';
 $requestedCourse = isset($_GET['course']) ? trim((string) $_GET['course']) : '';
-$selectedCourse = in_array($requestedCourse, $enquiryCourses, true) ? $requestedCourse : '';
+$selectedCourse = in_array($requestedCourse, $enquiryCourses, true)
+    ? $requestedCourse
+    : (in_array($defaultEnquiryCourse, $enquiryCourses, true) ? $defaultEnquiryCourse : '');
 
 $escape = static function (string $value): string {
     return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
