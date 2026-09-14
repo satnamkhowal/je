@@ -269,7 +269,7 @@
                         <h3>Cyber Security &amp; Testing</h3>
                         <p>Build awareness of secure practices, testing methods, issue reporting and systematic quality checks in controlled environments.</p>
                         <a href="cyber-security-course-jaipur.php">Cyber Security course</a> ·
-                        <a href="software-testing-course-jaipur.php">Testing course</a>
+                        <a href="courses.php">Testing course</a>
                     </article>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-30">
@@ -350,12 +350,12 @@
                 <p>Use these menu routes to narrow your requirement. Each focused page can be completed without changing existing indexed WordPress content.</p>
             </div>
             <div class="row je-program-links">
-                <div class="col-lg-4 col-md-6 mb-25"><a href="summer-internship-jaipur.php"><strong>Summer Internship</strong><span>Short-term practical training enquiry for the summer period</span></a></div>
-                <div class="col-lg-4 col-md-6 mb-25"><a href="winter-internship-jaipur.php"><strong>Winter Internship</strong><span>Technology practice and project guidance during the winter period</span></a></div>
-                <div class="col-lg-4 col-md-6 mb-25"><a href="industrial-training-jaipur.php"><strong>Industrial Training</strong><span>Structured technical learning aligned with academic requirements</span></a></div>
-                <div class="col-lg-4 col-md-6 mb-25"><a href="live-project-training-jaipur.php"><strong>Live Project Training</strong><span>Guided project workflow, implementation and documentation practice</span></a></div>
-                <div class="col-lg-4 col-md-6 mb-25"><a href="final-year-projects-jaipur.php"><strong>Final-Year Projects</strong><span>Project planning and technical guidance for eligible students</span></a></div>
-                <div class="col-lg-4 col-md-6 mb-25"><a href="placement-assistance.php"><strong>Placement Assistance</strong><span>Understand career-preparation support separately from internship training</span></a></div>
+                <div class="col-lg-4 col-md-6 mb-25"><a href="enquiry.php?course=Internship+or+Project+Training#course-enquiry"><strong>Summer Internship</strong><span>Short-term practical training enquiry for the summer period</span></a></div>
+                <div class="col-lg-4 col-md-6 mb-25"><a href="enquiry.php?course=Internship+or+Project+Training#course-enquiry"><strong>Winter Internship</strong><span>Technology practice and project guidance during the winter period</span></a></div>
+                <div class="col-lg-4 col-md-6 mb-25"><a href="enquiry.php?course=Internship+or+Project+Training#course-enquiry"><strong>Industrial Training</strong><span>Structured technical learning aligned with academic requirements</span></a></div>
+                <div class="col-lg-4 col-md-6 mb-25"><a href="enquiry.php?course=Internship+or+Project+Training#course-enquiry"><strong>Live Project Training</strong><span>Guided project workflow, implementation and documentation practice</span></a></div>
+                <div class="col-lg-4 col-md-6 mb-25"><a href="enquiry.php?course=Internship+or+Project+Training#course-enquiry"><strong>Final-Year Projects</strong><span>Project planning and technical guidance for eligible students</span></a></div>
+                <div class="col-lg-4 col-md-6 mb-25"><a href="enquiry.php?course=Internship+or+Project+Training#course-enquiry"><strong>Placement Assistance</strong><span>Understand career-preparation support separately from internship training</span></a></div>
             </div>
         </div>
     </section>
