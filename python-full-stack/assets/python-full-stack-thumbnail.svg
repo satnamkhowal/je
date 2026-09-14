@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Python Full Stack Developer Course - Jaipur Engineers</title>
+  <desc id="desc">Jaipur Engineers branded course thumbnail for Python Full Stack Developer training in Jaipur.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111318"/>
+      <stop offset="0.7" stop-color="#1b1f27"/>
+      <stop offset="1" stop-color="#2a1a12"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ff731e" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ff731e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" rx="32" fill="url(#bg)"/>
+  <circle cx="1115" cy="110" r="300" fill="url(#glow)"/>
+  <g opacity="0.08" stroke="#ffffff">
+    <path d="M0 120H1280M0 240H1280M0 360H1280M0 480H1280M0 600H1280"/>
+    <path d="M160 0V720M320 0V720M480 0V720M640 0V720M800 0V720M960 0V720M1120 0V720"/>
+  </g>
+  <rect x="72" y="62" width="300" height="92" rx="18" fill="#ffffff"/>
+  <image href="../../assets/images/jaipur-engieers-logo.png" x="92" y="80" width="260" height="56" preserveAspectRatio="xMidYMid meet"/>
+  <text x="76" y="245" fill="#ff731e" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" letter-spacing="3">CAREER TRACK • DEVELOPMENT</text>
+  <text x="76" y="330" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800">Python Full Stack</text>
+  <text x="76" y="410" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800">Developer Course</text>
+  <text x="78" y="468" fill="#cfd2d8" font-family="Arial, Helvetica, sans-serif" font-size="28">Python • Django • REST API • SQL • React • Git</text>
+  <g transform="translate(78 535)">
+    <rect width="225" height="58" rx="29" fill="#ff731e"/>
+    <text x="112.5" y="38" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">5–6 Months</text>
+  </g>
+  <g transform="translate(324 535)">
+    <rect width="260" height="58" rx="29" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="130" y="38" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">Live Projects</text>
+  </g>
+  <g transform="translate(606 535)">
+    <rect width="300" height="58" rx="29" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="150" y="38" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">Online + Offline</text>
+  </g>
+  <text x="78" y="658" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">Mansarovar, Jaipur • Established 1996</text>
+  <g transform="translate(1010 250)">
+    <rect width="170" height="170" rx="36" fill="#ff731e"/>
+    <text x="85" y="112" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="98" font-weight="800">Py</text>
+  </g>
+</svg>
