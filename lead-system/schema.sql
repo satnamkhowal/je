@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS je_leads (
   preferred_mode VARCHAR(50) DEFAULT NULL,
   preferred_location VARCHAR(120) DEFAULT NULL,
   preferred_batch VARCHAR(80) DEFAULT NULL,
-  message TEXT DEFAULT NULL,
+  message TEXT NULL,
   contact_consent TINYINT(1) NOT NULL DEFAULT 0,
   source_domain VARCHAR(190) DEFAULT NULL,
   source_page VARCHAR(255) DEFAULT NULL,
