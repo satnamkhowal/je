@@ -69,15 +69,21 @@ function je_lead_log(string $message, array $context = []): void
     @file_put_contents($dir . '/lead-errors.log', $line, FILE_APPEND | LOCK_EX);
 }
 
-function je_lead_clean(?string $value, int $max = 255): string
+function je_lead_clean($value, int $max = 255): string
 {
+    if (is_array($value) || is_object($value)) {
+        return '';
+    }
     $value = trim((string)$value);
     $value = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/u', '', $value) ?? '';
-    return mb_substr($value, 0, $max);
+    return function_exists('mb_substr') ? mb_substr($value, 0, $max) : substr($value, 0, $max);
 }
 
-function je_lead_phone(?string $value): string
+function je_lead_phone($value): string
 {
+    if (is_array($value) || is_object($value)) {
+        return '';
+    }
     $digits = preg_replace('/\D+/', '', (string)$value) ?? '';
     if (strlen($digits) === 12 && str_starts_with($digits, '91')) {
         $digits = substr($digits, 2);
@@ -101,13 +107,13 @@ function je_lead_ip_hash(): string
     return hash('sha256', $salt . '|' . $ip);
 }
 
-function je_lead_redirect(string $path): never
+function je_lead_redirect(string $path): void
 {
     header('Location: ' . $path, true, 303);
     exit;
 }
 
-function je_lead_fail(int $status = 422): never
+function je_lead_fail(int $status = 422): void
 {
     http_response_code($status);
     header('Content-Type: text/html; charset=UTF-8');
