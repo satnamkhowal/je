@@ -8,6 +8,21 @@ function je_notify_lead(array $lead): bool
     $config = je_lead_config();
     $smtp = $config['smtp'] ?? [];
 
+    $required = ['host', 'username', 'password', 'from_email', 'to_email'];
+    foreach ($required as $key) {
+        if (trim((string)($smtp[$key] ?? '')) === '') {
+            je_lead_log('Lead saved but SMTP notification skipped: SMTP configuration is incomplete.', [
+                'lead_uuid' => $lead['lead_uuid'] ?? null,
+                'missing' => $key,
+            ]);
+            return false;
+        }
+    }
+    if (!filter_var((string)$smtp['from_email'], FILTER_VALIDATE_EMAIL) || !filter_var((string)$smtp['to_email'], FILTER_VALIDATE_EMAIL)) {
+        je_lead_log('Lead saved but SMTP notification skipped: From/To email is invalid.', ['lead_uuid' => $lead['lead_uuid'] ?? null]);
+        return false;
+    }
+
     $autoload = dirname(__DIR__) . '/vendor/autoload.php';
     if (!is_file($autoload)) {
         je_lead_log('Lead saved but email notification skipped: Composer dependencies are not installed.', ['lead_uuid' => $lead['lead_uuid'] ?? null]);
@@ -23,11 +38,11 @@ function je_notify_lead(array $lead): bool
     try {
         $mail = new PHPMailer\PHPMailer\PHPMailer(true);
         $mail->isSMTP();
-        $mail->Host = (string)($smtp['host'] ?? '');
+        $mail->Host = (string)$smtp['host'];
         $mail->Port = (int)($smtp['port'] ?? 587);
         $mail->SMTPAuth = true;
-        $mail->Username = (string)($smtp['username'] ?? '');
-        $mail->Password = (string)($smtp['password'] ?? '');
+        $mail->Username = (string)$smtp['username'];
+        $mail->Password = (string)$smtp['password'];
 
         $encryption = strtolower((string)($smtp['encryption'] ?? 'tls'));
         if ($encryption === 'ssl' || $encryption === 'smtps') {
@@ -36,9 +51,9 @@ function je_notify_lead(array $lead): bool
             $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
         }
 
-        $fromEmail = (string)($smtp['from_email'] ?? 'info@jaipurengineers.com');
+        $fromEmail = (string)$smtp['from_email'];
         $fromName = (string)($smtp['from_name'] ?? 'Jaipur Engineers');
-        $toEmail = (string)($smtp['to_email'] ?? $fromEmail);
+        $toEmail = (string)$smtp['to_email'];
 
         $mail->setFrom($fromEmail, $fromName);
         $mail->addAddress($toEmail);
